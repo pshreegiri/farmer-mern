@@ -2,6 +2,9 @@
 import "./Landing.css";
 import { useNavigate } from "react-router-dom";
 
+// import farmer image
+import farmerImg from "../assets/images/farmer.jpg";
+
 export default function Landing() {
   const navigate = useNavigate();
 
@@ -11,16 +14,19 @@ export default function Landing() {
       {/* HERO SECTION */}
       <section className="hero">
         <div className="hero-left">
-          <h1 className="hero-title">🌾Farmer AI Compliance And Disease Alert System (F-ACDA)</h1>
+          <h1 className="hero-title">
+            🌾 Farmer AI Compliance And Disease Alert System (F-ACDA)
+          </h1>
+
           <p className="hero-subtitle">
-            Farmer AI–Crop Disease Analyzer
+            AI-powered Crop Disease Detection aligned with Government Advisory
           </p>
 
           <p className="hero-text">
             F-ACDA helps farmers detect crop diseases at an early stage using
-            Artificial Intelligence. By simply uploading a crop image, farmers
-            receive disease insights, risk levels, and preventive actions —
-            all in simple language.
+            Artificial Intelligence. By uploading a crop image, farmers receive
+            disease insights, risk levels, and <strong>government-approved
+            preventive measures</strong> in simple and understandable language.
           </p>
 
           <button className="hero-btn" onClick={() => navigate("/home")}>
@@ -29,108 +35,109 @@ export default function Landing() {
         </div>
 
         <div className="hero-right">
-          <h3>Why Farmers Need F-ACDA?</h3>
-          <ul>
-            <li>✔ Early disease detection saves crops</li>
-            <li>✔ Reduces unnecessary pesticide usage</li>
-            <li>✔ Weather-aware farming decisions</li>
-            <li>✔ Easy to use even for non-technical users</li>
-          </ul>
+          <img
+            src={farmerImg}
+            alt="Farmer using mobile technology"
+            className="hero-image"
+          />
+          <p className="hero-image-caption">
+            Trusted AI guidance for safe and compliant farming
+          </p>
+        </div>
+      </section>
+
+      {/* WHY F-ACDA */}
+      <section className="section light">
+        <h2 className="section-title">Why Farmers Need F-ACDA</h2>
+
+        <div className="info-grid">
+          <div className="info-card">✔ Early disease detection to reduce crop loss</div>
+          <div className="info-card">✔ Recommendations aligned with government guidelines</div>
+          <div className="info-card">✔ Avoids unsafe or unverified farming practices</div>
+          <div className="info-card">✔ Easy to use for non-technical farmers</div>
         </div>
       </section>
 
       {/* HOW IT WORKS */}
-      <section className="section light">
+      <section className="section dark">
         <h2 className="section-title">How F-ACDA Works</h2>
 
         <div className="steps">
           <div className="step-card">
-            <h3>📸 Step 1: Upload Crop Image</h3>
+            <span className="step-icon">📸</span>
+            <h3>Step 1: Upload Crop Image</h3>
             <p>
               The farmer uploads a clear photo of the affected crop leaf.
-              This image becomes the primary input for AI analysis.
+              This image is used for disease identification.
             </p>
           </div>
 
           <div className="step-card">
-            <h3>🧠 Step 2: AI Disease Analysis</h3>
+            <span className="step-icon">🧠</span>
+            <h3>Step 2: AI Disease Detection</h3>
             <p>
-              The system uses Gemini AI to analyze visual patterns such as
-              spots, discoloration, or fungal growth to identify possible
-              diseases.
+              The AI model analyzes visual symptoms like spots,
+              discoloration, or fungal patterns.
             </p>
           </div>
 
           <div className="step-card">
-            <h3>🌦️ Step 3: Weather-Aware Advisory</h3>
+            <span className="step-icon">📜</span>
+            <h3>Step 3: Government Advisory Validation</h3>
             <p>
-              Weather data (temperature, humidity, rainfall) is combined
-              with AI results to generate realistic and safe recommendations.
+              The detected disease is matched with official agricultural
+              advisory rules to ensure safe and approved guidance.
             </p>
           </div>
         </div>
       </section>
 
-      {/* WHAT FARMER GETS */}
-      <section className="section dark">
+      {/* WHAT FARMER RECEIVES */}
+      <section className="section light">
         <h2 className="section-title">What the Farmer Receives</h2>
 
         <div className="info-grid">
           <div className="info-card">
             <h4>🦠 Disease Status</h4>
             <p>
-              Identifies whether a disease is detected or not, along with
-              possible causes.
+              Shows whether a disease is detected and highlights possible causes.
             </p>
           </div>
 
           <div className="info-card">
             <h4>⚠ Risk Level</h4>
             <p>
-              Shows Low, Medium, or High risk so farmers can prioritize actions.
+              Displays Low, Medium, or High risk for timely decision making.
             </p>
           </div>
 
           <div className="info-card">
-            <h4>🌱 Actionable Advice</h4>
+            <h4>🌱 Approved Actions</h4>
             <p>
-              Provides step-by-step preventive and corrective measures in
-              farmer-friendly language.
+              Step-by-step preventive and corrective measures aligned with
+              government agricultural advisory.
             </p>
           </div>
 
           <div className="info-card">
-            <h4>🌦️ Weather Alerts</h4>
+            <h4>🛡 Safe Farming Guidance</h4>
             <p>
-              Warns farmers if weather conditions may worsen the disease.
+              Ensures compliance with verified and safe farming practices.
             </p>
           </div>
         </div>
-      </section>
 
-      {/* TECHNOLOGY TRANSPARENCY */}
-      <section className="section light">
-        <h2 className="section-title">Technology Used</h2>
-        <p className="tech-text">
-          F-ACDA is built using modern and reliable technologies to ensure
-          accuracy and scalability:
+        <p className="trust-line">
+          Designed for farmers • Based on official agricultural advisory • Safe & reliable
         </p>
-
-        <ul className="tech-list">
-          <li>✔ React (Frontend)</li>
-          <li>✔ Node.js & Express (Backend)</li>
-          <li>✔ Gemini AI (Image-based disease analysis)</li>
-          <li>✔ Weather API (Climate-aware advisory)</li>
-          <li>✔ MongoDB (Data storage)</li>
-        </ul>
       </section>
 
       {/* FINAL CTA */}
       <section className="footer-cta">
-        <h2>Start Smart Farming Today</h2>
+        <h2>Start Safe & Smart Farming Today</h2>
         <p>
-          Upload your crop image and get instant AI-powered disease analysis
-          tailored for your farm.
+          Upload your crop image and receive AI-driven disease analysis
+          aligned with trusted government agricultural guidelines.
         </p>
 
         <button className="hero-btn" onClick={() => navigate("/home")}>
